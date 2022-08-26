@@ -10,7 +10,7 @@ const Gallery = () => {
   <div className='app__gallery flex__center'>
     <div className="app__gallery-content">
       <SubHeading title="Lo Mejor"/>
-      <h1 className="headtext__cormorant">Foto de galeria</h1>
+      <h1 className="headtext__cormorant">Galeria de fotos</h1>
       <p className='p__opensans' >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, molestiae.
       </p>

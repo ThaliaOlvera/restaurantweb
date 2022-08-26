@@ -18,7 +18,7 @@ const Footer = () => (
        <p className="p__opensans"> +172 55 4854 15 </p>
       </div>
       <div className="app__footer-links_logo">
-       <img src={images.gericht} alt="Footer logo"/>
+       <img src={images.Gabs} alt="Footer logo"/>
        <p className="p__opensans">
         "La excelencia está en la diversidad
          y el modo de progresar es conocer y
@@ -42,7 +42,7 @@ const Footer = () => (
 
       <div className='footer__copyright'>
         <p className="p__opensans">
-          Made whit love for Thalia Olvera
+          Made with love for Thalia Olvera
         </p>
       </div>
 
