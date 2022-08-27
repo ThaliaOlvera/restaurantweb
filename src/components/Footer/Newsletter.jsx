@@ -2,30 +2,35 @@ import React from 'react';
 import SubHeading from '../SubHeading/SubHeading';
 import {useState} from 'react';
 import { db } from "../../firebase/firebase";
-import { collection, getDocs, addDoc} from "firebase/firestore";
+import { collection, addDoc, clearIndexedDbPersistence} from "firebase/firestore";
 
 import './Newsletter.css';
-import { async } from '@firebase/util';
 
 
-const formularioInicial = {
-  nombre: "",
-  correo: "",
-  telefono: "",
-}
+
 
 
 
 const Newsletter = () => {
   
+  const formularioInicial = {
+    nombre: "",
+    correo: "",
+    telefono: "",
+  }
+
   const [form, setForm] = useState(formularioInicial);
   
   const obtenerUsuario= async () => {
     const data = collection (db, "usuarios")
     await addDoc (data, form)
-    console.log(form);
-    
+    console.log("Datos Enviados")
+    setForm(formularioInicial);
+
   };
+
+  
+  
   
   return(
     <>
@@ -40,7 +45,7 @@ const Newsletter = () => {
       <input type="number" value={form.telefono}  onChange={(e) => setForm({...form, telefono:e.target.value})} id="phonenumber" placeholder='Introduce tu numero de telefono' />
       <input type="email" value={form.correo}  onChange={(e) => setForm({...form, correo:e.target.value})} id="emailadrees" placeholder='Introduce tu correo' />
       <br></br>
-      <button type="button" className='custom__button' onClick={obtenerUsuario}>Enviar</button>
+      <button type="submit" className='custom__button'  onClick={obtenerUsuario}>Enviar</button>
     </div>
 
   </div>
