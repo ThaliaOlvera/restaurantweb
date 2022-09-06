@@ -1,8 +1,8 @@
 import React from 'react';
 import SubHeading from '../SubHeading/SubHeading';
 import {useState} from 'react';
-import { db } from "../../firebase/firebase";
-import { collection, addDoc, clearIndexedDbPersistence} from "firebase/firestore";
+import db from "../../firebase/firebase";
+import { collection, addDoc} from "firebase/firestore";
 
 import './Newsletter.css';
 

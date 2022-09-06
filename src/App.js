@@ -1,24 +1,18 @@
 import React from 'react';
-
+import {BrowserRouter, Routes} from 'react-router-dom'
 import { Navbar } from './components';
-import {Header} from './components/Headerbar/Header';
-import {AboutUs} from './container/AboutUs/AboutUs';
-import Chef from './container/Chef/Chef'
-import Gallery from './container/Gallery/Gallery'
-import FindUs from './container/Findus/FindUs'
-import Footer from './container/Footer/Footer'
 import './App.css';
+import IndexNavigation from './routes/Routes';
+
+
 
 const App = () => (
-  <div>
+  <BrowserRouter>
+   
     <Navbar />
-    <Header />
-    <AboutUs />
-    <Chef />
-    <Gallery />
-    <FindUs />
-    <Footer /> 
-  </div>
+    <IndexNavigation/>
+  
+  </BrowserRouter>
 );
 
 export default App;
