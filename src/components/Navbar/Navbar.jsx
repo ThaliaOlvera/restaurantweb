@@ -3,8 +3,8 @@ import {MdOutlineRestaurantMenu} from 'react-icons/md';
 import images from '../../constants/images';
 import  './Navbar.css';
 import {Link} from 'react-router-dom';
-import SignInWithFirebase from '../../firebase/Signin'
 import React from 'react';
+import { Button } from 'bootstrap';
 
 
 const Navbar = () => {
@@ -22,10 +22,8 @@ const Navbar = () => {
     <li className='p_opensans'><Link to='/Footer'>Reservar</Link></li>
     </ul>
     <div className='app_navbar-login'>
-      <Link to='/' className='p_opensans' onClick={{SignInWithFirebase}} >Log in/Register</Link>
-      
+      <Link to='/' className='p_opensans'>Log in/Register</Link>
       <Link to='/' className='p__opensans'>Blog</Link>
-      
     </div>
 
     <div className="app__navbar-smallscreen">
