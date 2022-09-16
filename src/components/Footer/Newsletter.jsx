@@ -7,10 +7,6 @@ import { collection, addDoc} from "firebase/firestore";
 import './Newsletter.css';
 
 
-
-
-
-
 const Newsletter = () => {
   
   const formularioInicial = {
@@ -29,9 +25,6 @@ const Newsletter = () => {
 
   };
 
-  
-  
-  
   return(
     <>
   <div className='app__newsletter'>
@@ -51,6 +44,7 @@ const Newsletter = () => {
   </div>
   </>
 );
+
 }
 
 

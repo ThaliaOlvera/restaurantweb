@@ -4,7 +4,8 @@ import images from '../../constants/images';
 import  './Navbar.css';
 import {Link} from 'react-router-dom';
 import React from 'react';
-import { Button } from 'bootstrap';
+import { loginGoogle } from '../../firebase/Signin';
+
 
 
 const Navbar = () => {
@@ -22,7 +23,7 @@ const Navbar = () => {
     <li className='p_opensans'><Link to='/Footer'>Reservar</Link></li>
     </ul>
     <div className='app_navbar-login'>
-      <Link to='/' className='p_opensans'>Log in/Register</Link>
+      <Link to='/' className='p_opensans' onClick={loginGoogle}>Log in/Register</Link>
       <Link to='/' className='p__opensans'>Blog</Link>
     </div>
 
